@@ -21,6 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'awesome' ); ?></a>
 
@@ -30,7 +33,7 @@
 		
 		<?php awesome_the_site_logo(); ?>
 
-		<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+		
 		
 		<?php awesome_social_menu(); ?>
 	
