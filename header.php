@@ -24,18 +24,5 @@
 
 <?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
 
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'awesome' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-	
-		<?php get_template_part( 'components/header/header', 'image' ); ?>
-		
-		<?php awesome_the_site_logo(); ?>
 
-		
-		
-		<?php awesome_social_menu(); ?>
-	
-	</header>
-	<div id="content" class="site-content">

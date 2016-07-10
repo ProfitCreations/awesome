@@ -128,12 +128,12 @@ function awesome_scripts() {
   wp_enqueue_script('mwm-script', get_template_directory_uri() . '/dist/scripts/jquery.js', array(), '20151215', true);
 
   wp_enqueue_script('mwm-script', get_template_directory_uri() . '/dist/scripts/customizer.js', array(), '20151215', true);
-  
-  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/dist/scripts/main.js', array(), '20151215', true);
 
-  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/assets/js/jquery.easing.min.js', array(), '20151215', true);
+  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/dist/scripts/main.js', array(), '1.0.0', true );
 
-  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/assets/js/scrolling-nav.js', array(), '20151215', true);
+//  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/assets/scripts/jquery.easing.min.js', array(), '1.0.0', true );
+
+//  wp_enqueue_script('mwm-script', get_template_directory_uri() . '/assets/scripts/scrolling-nav.js', array(), array(), '1.0.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -165,3 +165,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ *  Register Custom Navigation Walker
+ */
+
+require_once('wp_bootstrap_navwalker.php');
